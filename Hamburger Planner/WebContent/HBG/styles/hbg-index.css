@@ -1,0 +1,269 @@
+#hbg-index .content-1 {
+    position:relative;
+    background-image: url(images/main.jpg);
+    height: 500px;
+    background-size: cover;
+}
+
+#hbg-index .content-1 .content1-1 {
+    display: flex;
+    justify-content: center;
+    width:80%;
+    height: 200px;
+    margin: 0 auto;
+    padding: 100px;
+    color: #0404B4;
+    font-weight:bold;    
+}
+
+.preview {
+    position: absolute; right: 0; bottom: 0;top: 0; left: 0;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto; z-index: -100;
+    /*ba`kground: url(polina.jpg) no-repeat;*/
+    background-size: cover;
+}
+
+#hbg-index .content-1 .content1-1 h4 {
+    margin-top: 40px;
+    font-size: 40px;    
+    text-align: center;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+}
+
+#hbg-index .content-1 .content1-1 h5 {
+    margin-top: -10px;
+    font-size: 30px;
+    text-align: center;
+    color: #ddd;
+    font-family: 'Black Han Sans', sans-serif;
+}
+
+#hbg-index .content-1 .content1-1 span div {
+    
+}
+
+#hbg-index .content-1 a {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin: 0 auto;
+    width: 300px;
+    margin-top: 140px;    
+    color: #fff;
+    letter-spacing: 4px;
+    text-shadow: 1px 1px 5px #000;
+}
+
+#hbg-index .mountain p {position:absolute; font-size:22px; width:100%; text-align:center; color:#fff; left:0%; top:30%;}
+#hbg-index .mountain  p span.txt1 {width:100%; display:block;}
+#hbg-index .mountain  p span.txt1-1 {width:100%; display:block;font-size:48px;font-weight: bold;}
+#hbg-index .mountain  p span.txt2 {font-size:20px;}
+
+#hbg-index .mountain img{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    min-width: 100%;
+    height: 550px;
+    margin-top: 230px;
+    background: url('images/mountain2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;    
+}
+
+#hbg-index .content-3 {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+#hbg-index .content-3-1 {
+    width: 50%;
+    height: 400px;
+}
+
+#hbg-index .content-3-1 img{
+    width: 100%;
+    height: 400px;
+}
+
+#hbg-index .content-3-2 {
+    display: flex; align-items: center; justify-content: center; flex-direction: column;
+    width: 50%;
+    height: 400px;
+    text-align: center;
+    background-color: #27AE60;
+    color: #fff;
+}
+
+#hbg-index .content-3-2 h1 {
+    margin-top: 20px;
+    font-size: 50px;
+    height: 60px;
+}
+
+#hbg-index .content-3-2 span {
+    font-size: 20px;
+    line-height: normal;
+}
+
+#hbg-index .content-4 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+#hbg-index .content-4-1 {
+    display: flex; justify-content: center; flex-direction: column;
+    width: 50%; height: 400px;
+    padding: 50px;
+    background-color: #C0392B;
+    color: #fff;
+}
+
+#hbg-index .content-4-1 h1 {
+    margin-top: 20px;
+    font-size: 45px;
+    height: 60px;
+}
+
+#hbg-index .content-4-1 span {
+    font-size: 20px;
+    line-height: normal;
+}
+
+
+#hbg-index .content-4-2 {
+    width: 50%;
+    height: 400px;
+}
+
+#hbg-index .content-4-2 img{
+    width: 100%;
+    height: 400px;
+}
+
+#hbg-index .content-5 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+#hbg-index .content-5-1 {
+    width: 50%;
+    height: 400px;
+}
+
+#hbg-index .content-5-1 img{
+    width: 100%;
+    height: 400px;
+     background-color: #4b6584;
+}
+
+#hbg-index .content-5-2 {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center;
+    width: 50%;
+    height: 400px;
+    padding: 50px;
+    background-color: #fbc531;
+    color: #333;
+}
+
+#hbg-index .content-5-2 h1 {
+    margin-top: 20px;
+    font-size: 50px;
+    height: 60px;
+}
+
+#hbg-index .content-5-2 span {
+    font-size: 20px;
+    line-height: normal;
+}
+
+#hbg-index .content-6 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 500px;
+    margin: 40px 0;
+    background: #3C3D3E;
+}
+
+#hbg-index .content-6-1 {
+    width: 50%; 
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+#hbg-index .content-6-1 a {
+    color: rgb(255, 255, 255);
+    font-size: 90px;
+    line-height: 100px;
+}
+
+#hbg-index .content-6-2 {
+    padding: 50px;
+    text-align: center;
+    line-height: normal;
+}
+
+#hbg-index .content-6-2 h2{
+    margin-bottom: 40px;
+    font-size: 30px;
+    color: #fff;
+}
+
+#hbg-index .content-6-2 ul li{
+    font-size: 18px;
+    margin-bottom: 40px;
+    display: block;
+    color: #fff;
+    text-align: justify;
+    
+}
+
+#hbg-index .content-7 {
+    margin-top : 40px;
+    width: 100%;
+    height: 400px;
+    background: #16a085;
+    background-image: url('images/graphic-1552354_1280.png');
+    background-size: 20%;
+    background-position: left 10% center;
+    background-repeat: no-repeat;
+}
+
+#hbg-index .content-7 h4 {
+    padding: 80px 0 40px 0;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+}
+
+#hbg-index .content-7 h5 {
+    padding-top: 20px;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+}
+
+.btn-top {
+    position: fixed;
+    right: 20px; bottom: 20px;
+    display: flex; align-items: center; justify-content: center;
+    width: 50px; height: 50px;
+    background: #d35400;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 50px;
+    box-shadow: 1px 1px 5px #333;
+}

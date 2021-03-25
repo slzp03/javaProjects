@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+encoding//src/hbg/action/DeleteAction.java=UTF-8
+encoding//src/hbg/action/RegisterInsertAction.java=UTF-8
+encoding//src/hbg/controller/HbgController.java=UTF-8
+encoding//src/hbg/dao/UserDAO.java=UTF-8
+encoding//src/hbg/util/DBCPInit.java=UTF-8
+encoding//src/hbg/util/EmailConfirm.java=UTF-8

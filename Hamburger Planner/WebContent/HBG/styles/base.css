@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean');
+
+* { 
+    margin: 0; padding: 0; box-sizing: border-box; 
+}
+html, body { 
+    width: 100%; height: 100%; 
+}
+body, table, th, td, input, select, textarea, div, li {
+    color: aqua;
+    font-family: 'Noto Sans KR', sans-serif; 
+    font-size: 12px;
+    font-style: normal; 
+    font-weight: 400; /* regular 400, bold 700 */
+    line-height: 18px; word-spacing: -1pt; word-break: break-all; 
+}
+a, a:active, a:hover, a:link, a:visited {
+    color: inherit; text-decoration: none;    
+}
+img, fieldset { 
+    border: 0 none; 
+}
+dl, ul, ol, li { 
+    list-style: none; 
+}
+ul { 
+    font-size: 0;
+}
+li { 
+    display: inline-block;
+}
+table { 
+    border-collapse: collapse; 
+}
+input { 
+    padding: 2px; vertical-align: middle; font-size: 100%; 
+}
+select { 
+    height: 18px; vertical-align: middle; font-size: 100%; 
+}
+
+input[type=submit] {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=submit]:active {
+    outline: none;
+}
+
+input[type=submit]:focus {
+    outline: none;
+}
+
+input[type=button] {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=button]:active {
+    outline: none;
+}
+
+input[type=button]:focus {
+    outline: none;
+}
+
+input[type=text] {
+    background: none;
+    border: none;
+}
+
+input[type=text]:active {
+    outline: none;
+}
+
+input[type=text]:focus {
+    outline: none;
+}
