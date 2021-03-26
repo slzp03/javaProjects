@@ -40,7 +40,7 @@ if(emailChecked==true){
 	PrintWriter sc = response.getWriter();
 	sc.println("<script>");
 	sc.println("alert('既に証明しました。');");
-	sc.println("location.href='index.jsp'");
+	sc.println("location.href='index.jsp';");
 	sc.println("</script>");
 	sc.close();
 	return;

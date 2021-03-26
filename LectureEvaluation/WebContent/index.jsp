@@ -219,7 +219,7 @@
 					<div class="form-row">
 						<div class="form-group col-sm-4">
 							<label>年</label>
-							<select name="lecturYear" class="form-control">
+							<select name="lectureYear" class="form-control">
 								<option value="2011">2011</option>
 								<option value="2012">2012</option>
 								<option value="2013">2013</option>
@@ -334,7 +334,7 @@
 					</div>
 					
 					<div class="modal-footer">
-						<button type="submit" class="btn btn-danger">登録</button>
+						<button type="submit" class="btn btn-danger">信号する</button>
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">取り消し</button>
 					</div>
 				</form>

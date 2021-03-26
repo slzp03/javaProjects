@@ -43,7 +43,6 @@ if(userID == null || userPassword == null ){
 
 UserDAO userDAO = new UserDAO();
 int result = userDAO.login(userID, userPassword);
-System.out.println(result);
 if(result==1){
 	session.setAttribute("userID", userID);
 	PrintWriter sc = response.getWriter();
