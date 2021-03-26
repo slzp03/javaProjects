@@ -27,7 +27,7 @@
 	}
 	
 %>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="index.jsp">講義評価WEBSITE</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -54,8 +54,8 @@
         </div>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="内容入力" aria-label="Search">
+    <form action = "./index.jsp" method="get"class="form-inline my-2 my-lg-0">
+      <input type = "text" name="search" class="form-control mr-sm-2" type="search" placeholder="内容入力" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">検索</button>
     </form>
   </div>

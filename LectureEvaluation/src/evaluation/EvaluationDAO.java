@@ -3,6 +3,7 @@ package evaluation;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 import util.DatabaseUtil;
 
@@ -42,5 +43,61 @@ public class EvaluationDAO {
 		return -1; //DataBase Error
 	}
 	
-	
+	public ArrayList<EvaluationDTO> getList(String lectureDivide, String searchType,String search, int pageNumber){
+		if(lectureDivide.equals("ëSÇƒ")) {
+			lectureDivide="";
+		}
+		ArrayList<EvaluationDTO> evaluationList = null;
+		String SQL = "";
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			if(searchType.equals("ç≈êV")) {
+				SQL="select * from evaluation where lectureDivide like ? and concat(lectureName,professorName,evaluationTitle,evaluationContent) like"+
+						"? order by evaluationID desc limit" + pageNumber*5+","+pageNumber*5+6;
+			}else if(searchType.equals("êÑëE")) {
+				SQL="select * from evaluation where lectureDivide like ? and concat(lectureName,professorName,evaluationTitle,evaluationContent) like"+
+						"? order by likecount desc limit" + pageNumber*5+","+pageNumber*5+6;
+			}
+			conn=DatabaseUtil.getConnection();
+			pstmt=conn.prepareStatement(SQL);
+			pstmt.setString(1, "%"+lectureDivide+"%");
+			pstmt.setString(2, "%"+search+"%");
+
+			rs=pstmt.executeQuery();
+			evaluationList = new ArrayList<EvaluationDTO>();
+			if(rs.next()) {
+				EvaluationDTO evaluationDTO = new EvaluationDTO(
+						rs.getInt(1),
+						rs.getString(2),
+						rs.getString(3),
+						rs.getString(4),
+						rs.getInt(5),
+						rs.getString(6),
+						rs.getString(7),
+						rs.getString(8),
+						rs.getString(9),
+						rs.getString(10),
+						rs.getString(11),
+						rs.getString(12),
+						rs.getString(13),
+						rs.getInt(14)
+						);
+				evaluationList.add(evaluation);
+			}
+			
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {if(conn!=null)conn.close();}catch (Exception e) {e.printStackTrace();}
+			try {if(pstmt!=null)pstmt.close();}catch (Exception e) {e.printStackTrace();}
+			try {if(rs!=null)rs.close();}catch (Exception e) {e.printStackTrace();}
+			
+			
+		}
+		return null; //DataBase Error
+		
+	}
 }
