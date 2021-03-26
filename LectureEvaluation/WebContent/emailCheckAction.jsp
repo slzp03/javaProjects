@@ -7,9 +7,11 @@
 <%
 request.setCharacterEncoding("UTF-8");
 String code = null;
-if(session.getAttribute("code")!=null){
-	code = (String)session.getAttribute("code");
+if(request.getParameter("code")!=null){
+	code = request.getParameter("code");
 }
+System.out.println("TESTESTEST Session :"+session.getAttribute("code"));
+System.out.println("TESTESTEST :"+code);
 UserDAO userDAO = new UserDAO();
 String userID=null;
 

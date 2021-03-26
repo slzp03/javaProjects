@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page import="java.io.PrintWriter" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +11,22 @@
 <link rel="stylesheet" href="./css/custom.css">
 </head>
 <body>
+	<%
+	String userID=null;
+	if(session.getAttribute("userID")!=null){
+		userID=(String)session.getAttribute("userID");
+	}
+	if(userID!=null){
+		PrintWriter sc = response.getWriter();
+		sc.println("<script>");
+		sc.println("alert('既にLoginしました。');");
+		sc.println("location.href='index.jsp';");
+		sc.println("</script>");
+		sc.close();
+		return;
+	}
+	
+%>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="index.jsp">講義評価WEBSITE</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,7 +35,7 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item ">
+      <li class="nav-item active">
         <a class="nav-link" href="index.jsp">MAIN</a>
       </li>
       <li class="nav-item dropdown">
@@ -26,9 +43,14 @@
           会員管理
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%
+          if(userID ==null) {
+          %>
           <a class="dropdown-item" href="userLogin.jsp">Login</a>
-          <a class="dropdown-item active" href="userJoin.jsp">新規登録</a>
-           <a class="dropdown-item" href="userLogout.jsp">Logout</a>
+          <a class="dropdown-item" href="userJoin.jsp">新規登録</a>
+           <%}else{ %>
+          <a class="dropdown-item" href="userLogout.jsp">Logout</a>
+        <%} %>
         </div>
       </li>
     </ul>

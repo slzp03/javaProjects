@@ -16,11 +16,11 @@
 	if(session.getAttribute("userID")!=null){
 		userID=(String)session.getAttribute("userID");
 	}
-	if(userID!=null){
+	if(userID==null){
 		PrintWriter sc = response.getWriter();
 		sc.println("<script>");
-		sc.println("alert('既にLoginしました。');");
-		sc.println("location.href='index.jsp';");
+		sc.println("alert('Loginしてください。');");
+		sc.println("location.href='userLogin.jsp';");
 		sc.println("</script>");
 		sc.close();
 		return;
@@ -62,17 +62,11 @@
 </nav>
 
 <section class="container mt-3" style="max-width:560px;">
-	<form method="post" action ="./userLoginAction.jsp">
-		<div class="form-group">
-			<label>ID</label>
-			<input type="text" name="userID" class="form-control">
-		</div>
-		<div class="form-group">
-			<label>PASSWORD</label>
-			<input type="password" name="userPassword" class="form-control">
-		</div>
-		<button type="submit" class="btn btn-primary">Login</button>
-	</form>
+	
+<div class="alert alert-warning mt-4" role="alert">
+	E-Mail Address 証明が必要です。再び受けるのはボタンをクリックしてください。
+</div>
+<a href="emailSendAction.jsp" class="btn btn-primary">再証明</a>
 </section>
 
 <footer class="bg-dark mt-3 p-5 text-center" style="color:#ffffff;">

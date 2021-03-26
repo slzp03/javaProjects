@@ -50,7 +50,9 @@ String host = "http://localhost:8080/LectureEvaluation/";
 String from = "audgns842@gmail.com";
 String to = userDAO.getUserEmail(userID);
 String subject = "Email 証明です。";
-String content = "Linkに接続して証明してください。" + "<a href='"+host+"emailCheckAction.jsp?code="+new SHA256().getSHA256(to)+"'>メール証明</a>";
+String content = "Linkに接続して証明してください。" + 
+"<a href='"+host+"emailCheckAction.jsp?code="+new SHA256().getSHA256(to)+"'>メール証明</a>";
+
 Properties p = new Properties();
 p.put("mail.smtp.user", from);
 p.put("mail.smtp.host", "smtp.googlemail.com");
@@ -72,7 +74,7 @@ try{
 	msg.setFrom(fromAddr);
 	Address toAddr = new InternetAddress(to);
 	msg.addRecipient(Message.RecipientType.TO, toAddr);
-	msg.setContent(content,"text/html;charset=UTF-8");
+	msg.setContent(content,"text/html;charset=UTF8");
 	Transport.send(msg);
 }catch(Exception e){
 	
@@ -80,7 +82,7 @@ try{
 	e.printStackTrace();
 	PrintWriter sc = response.getWriter();
 	sc.println("<script>");
-	sc.println("alert('Error発生しました。');");
+	sc.println("alert('MAIL - Error発生しました。');");
 	sc.println("history.back();");
 	sc.println("</script>");
 	sc.close();
@@ -115,9 +117,14 @@ try{
           会員管理
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%
+          if(userID ==null) {
+          %>
           <a class="dropdown-item" href="userLogin.jsp">Login</a>
           <a class="dropdown-item" href="userJoin.jsp">新規登録</a>
-           <a class="dropdown-item" href="userLogout.jsp">Logout</a>
+           <%}else{ %>
+          <a class="dropdown-item" href="userLogout.jsp">Logout</a>
+        <%} %>
         </div>
       </li>
     </ul>
