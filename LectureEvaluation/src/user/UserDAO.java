@@ -9,7 +9,7 @@ import util.DatabaseUtil;
 public class UserDAO {
 	
 	public int join(UserDTO user) {
-		String SQL = "INSERT INTO USER VALUES(?,?,?,?,flase)";
+		String SQL = "INSERT INTO USER VALUES(?,?,?,?,false)";
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -66,7 +66,7 @@ public class UserDAO {
 	}
 	
 	public boolean getUserEmailChecked(String userID) {
-		String SQL = "SELECT userEmailChecked FROM USER WHERE user= ?";
+		String SQL = "SELECT userEmailChecked FROM USER WHERE userID= ?";
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;

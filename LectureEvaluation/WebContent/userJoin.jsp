@@ -18,7 +18,7 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item ">
         <a class="nav-link" href="index.jsp">MAIN</a>
       </li>
       <li class="nav-item dropdown">
@@ -27,7 +27,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="userLogin.jsp">Login</a>
-          <a class="dropdown-item" href="userJoin.jsp">新規登録</a>
+          <a class="dropdown-item active" href="userJoin.jsp">新規登録</a>
            <a class="dropdown-item" href="userLogout.jsp">Logout</a>
         </div>
       </li>
@@ -53,7 +53,7 @@
 			<label>E-MAIL</label>
 			<input type="email" name="userEmail" class="form-control">
 		</div>
-		<button type="submit" class="btn btn-primary">Login</button>
+		<button type="submit" class="btn btn-primary">登録</button>
 	</form>
 </section>
 
