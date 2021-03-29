@@ -30,3 +30,5 @@ create table LIKEY(
 	evaluationID int,
 	userIP varchar(50)
 );
+
+ alter table likey add primary key(userID, evaluationID);
