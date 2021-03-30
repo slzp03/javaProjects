@@ -43,7 +43,7 @@
 	display: inline-block;
 	width: 50px;
 	height: 50px;
-	background-image: url('/HBG/styles/images/hamgurger.png');
+	background-image: url('/HBG/styles/images/hamgurger5.png');
 	margin-right: 20px;
 }
 </style>

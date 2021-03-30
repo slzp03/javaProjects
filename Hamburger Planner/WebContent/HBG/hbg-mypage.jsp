@@ -124,7 +124,7 @@
                                 </label>
                                 </div>
                                 <input type="file" class="inp-img" name="user_image" id="user_image_file" style="display: none;" >
-                                <input class="user_name" name="user_name" type="text" placeholder="NAME" autocomplete="off" value="${user.user_name}">
+                                <input  style="color: #6879a1; width: 100%; height: 40px;border-bottom: 1px solid #47536d;" class="user_name" name="user_name" type="text" placeholder="NAME" autocomplete="off" value="${user.user_name}" readonly>
 
                                 <div class="msg msg-1"></div>
 
